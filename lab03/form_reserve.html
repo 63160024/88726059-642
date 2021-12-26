@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-10">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hotel Booking</title>
+   <link rel="stylesheet" type="text/Hotel Booking" herf="hotel Booking/mystyles.css">
+</head>
+<body>
+    <h3>Hotel Booking</h3>
+    <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/642/88726059/services/post.php">
+        <table border="2">
+        <tr>
+            <td>
+                <label for="Room Type">Room Type:</label>
+            </td>
+            <td>
+                    <select name="roomtype">
+                    <option value="0">Please Select</option>
+                    <option value="1">Standard</option>
+                    <option value="2">Luxury</option>
+                    <option value="3">Deluxe</option>
+                    </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Number of Guests">Number of Guests:</label>
+            </td>
+            <td>
+                <select name="Number of Guests">
+                    <option value="0">Please Select</option>
+                    <option value="1">1-2</option>
+                    <option value="2">3-4</option>
+                    <option value="3">5-6</option>
+                    <option value="4">7-8</option>
+                    </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fame" for="lname">Name:</label>
+        </td>
+            <td>
+                <input type="text" placeholder="First"name="fname" id="fname">
+                <input type="text" placeholder="Last"name="lname" id="lname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Email">Email:</label>
+            </td>
+            <td>
+                <input type="text" placeholder="john@company.com"name="email" id="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="arrivaldate" for="arrivaltime">Arrival:</label>
+            </td>
+            <td>
+                <input type="text" placeholder="MM/DD/YYYY"name="arrivaldate" id="arrivaldate"><input type="date" name="arrivaldate" id="arrivaldate">
+                <input type="text" placeholder="HH:MM"name="arrivaltime" id="arrivaltime"><input type="time" name="arrivaltime" id="arrivaltime">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="departuredate" for="departuretime">Departure:</label>
+            </td>
+            <td>
+                <input type="text" placeholder="MM/DD/YYYY"name="departuredate" id="departuredate"><input type="date" name="departuredate" id="departuredate">
+                <input type="text" placeholder="HH:MM"name="departuretime" id="departuretime"><input type="time" name="departuretime" id="departuretime">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Free Pickup">Free Pickup:</label>
+            </td>
+            <td>
+                <input type="radio" name="Free Pickup" id="Free Pickup" value="Yes">Yes, Sure!.
+                <input type="radio" name="Free Pickup" id="Free Pickup" value="No">No, I already rented a cal.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Flight Number">Flight Number:</label>
+            </td>
+            <td>
+                <input type="text" placeholder="c1209"name="flightNum" id="flightNum">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="otherreq">Other requests:</label>
+            </td>
+            <td>
+                <Textarea input type="text" name="otherreq" id="otherreq" rows="5" cols="50"></Textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type ="submit" value="Complete Reservation" ,body style="background-color: gray">
+            </td>
+        </tr>
+    </table>      
+ </form>
+</body>
+</html>

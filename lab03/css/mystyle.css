@@ -1,0 +1,9 @@
+
+body{
+    font-family: arial;
+    background-color: green(185, 179, 175);
+}
+
+h1{
+    color: red(255, 255, 255);
+}
