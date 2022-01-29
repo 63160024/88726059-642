@@ -1,0 +1,29 @@
+<HTML>
+<HEAD><TITLE>Example of alert, comfirm, prompt</TITLE>
+<SCRIPT LANGUAGE=JavaScript>
+function alertUser(){
+    alert("An alert box contains an exclamation mark");
+}
+function confirmUser(){
+    var msg="\n please confirm that you want\n"+
+            "to test another button?";
+    if(comfirm(msg))
+        document.write("<h2>You selected OK</h2>");
+    else
+        document.write("<h2>You selected Cancel</h2>");
+}
+function promptUser(){
+    namel=prompt("What is your name?"," ");
+    document.write("<h2>welcome to this page" + namel + "</h2>");
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+welcome to this page<br>
+<FORM>
+    <INPUT TYPE="button" VALUE="Click here to test alert()" onclick="alertUser()"><BR>
+    <INPUT TYPE="button" VALUE="Click here to test confirm()" onclick="conUserfirm()"><BR>   
+    <INPUT TYPE="button" VALUE="Click here to test prompt()" onclick="promptUser()">
+</FORM>
+</BODY>
+</HTML>

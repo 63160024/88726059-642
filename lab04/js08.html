@@ -1,0 +1,25 @@
+<html>
+<head><title>Image rollover</title>
+<script language=javascript>
+function highlightdocs(){
+    if(document.images){document.images["docs"].src = docsOn.src; }
+}
+function unhighlightdocs(){
+    if(document.images){document.images["docs"].src = docsOff.src; }
+}
+if(document.images){
+    docsOn = new Image();
+    docsOn.src = "gg_color.png";
+    docsOff = new Image();
+    docsOff.src = "gg_gray.png";
+} 
+</script>
+</head>
+<body>
+<P><A HREF="http://www.google.com"
+      onMouseOver="highlightdocs()" onMouseOut="unhighlightdocs()">
+    <IMG SRC="gg_gray.png" name=docs height=256 width=256 border=0>
+    </A>
+    </P>
+</body>
+</html>
