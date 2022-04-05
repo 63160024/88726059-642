@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+function calculate() {
+  var xhttp = new XMLHttpRequest();
+  
+  // callback function
+  xhttp.onreadystatechange = function() {
+    //alert("this.readyState ==" + this.readyState + ", this.status == " + this.status);
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("disp").innerHTML += this.responseText;
+    }
+  };
+  document.getElementById("disp").innerHTML = "";
+  var n1 = document.getElementById('n1').value;
+  var n2 = document.getElementById('n2').value;
+  
+  // get   cal.php?n1=3&n2=8
+  var queryString = "?n1=" + n1 + "&n2=" + n2;
+  xhttp.open("GET", "cal.php" + queryString);
+  xhttp.send();
+}
+</script>
+</head>
+<body>
+<h3>Baby Calculator</h3>
+<input type="text" id="n1" onKeyUp="calculate()"> + 
+<input type="text" id="n2" onKeyUp="calculate()">
+<input type="button" value="Calculate" onClick="calculate()"><br/>
+<h4><div id="disp">????</div></h4>
+</body>
+</html>
