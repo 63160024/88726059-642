@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body onLoad="getphrase()";>
+<h2>คำคำสิบล้อประจำวัน</h2>
+<button type="button" onclick="getphrase()">get a phrase</button>
+
+<h3><div id="disp"></div></h3>
+
+<script>
+function getphrase() {
+  var xhttp = new XMLHttpRequest();
+  // callback function
+  xhttp.onreadystatechange = function() {
+    //alert("this.readyState == " +  this.readyState + ", this.status == " + this.status);
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("disp").innerHTML = this.responseText;
+    } else {
+      // document.getElementById("disp").innerHTML = 
+      //  "this.readyState == " +  this.readyState + ", this.status == " + this.status;
+    }
+  };
+  xhttp.open("GET", "get_a_phrase.php", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
